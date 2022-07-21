@@ -5,7 +5,7 @@ Created on Wed Jun 22 14:52:58 2022
 
 @author: danb22
 
-Copyright (c) <year>, <copyright holder>
+Copyright (c) 2002, Daniel Blanchette
 All rights reserved.
 
 This source code is licensed under the BSD-style license found in the
