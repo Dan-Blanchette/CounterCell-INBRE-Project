@@ -65,23 +65,19 @@ def cells_only(image_path, connectivity = 1, count = 1):
     # console print out of identfied cell counts based on the applied mask
     print(f"There are {cell_count} cells in {image_path}")
     
-    
+    # store the data of from the mask application in the variable colored_label_image
     colored_label_image = skimage.color.label2rgb(labeled_image, bg_label=0)
+    # remove the grayscale filter
     summary_image = skimage.color.gray2rgb(gray_cells)
+    # apply the mask data to the numpy pixel array for printing
     summary_image[mask] = colored_label_image[mask]
     
-    
+    # OPTIONAL SETTINGS FOR IMAGE RESIZING
     # plt.figure(num=None, figsize=(8, 6), dpi=80, facecolor='none', clear=True)
     # plt.box(on=None)
     # plt.axis('off')
+
+    # display each image and as a return the settings for the summary_image
     plt.imshow(summary_image)
     plt.show()
-    return summary_image
-    
-    # plt.figure(num=None, figsize=(8, 6), dpi=80, facecolor='none', clear=True)
-    # plt.box(on=None)
-    # plt.axis('off')
-    # plt.imshow(cells_new)
-    # plt.show()
-    # plt.imshow(mask)
-    # plt.show()
+    return summary_image 
