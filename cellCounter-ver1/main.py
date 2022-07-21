@@ -6,7 +6,7 @@ Created on Tue Jun 21 10:37:11 2022
 
 @author: danb22
 
-Copyright (c) <2022>, <Dan Blanchette>
+Copyright (c) 2022, Dan Blanchette
 All rights reserved.
 
 This source code is licensed under the BSD-style license found in the
