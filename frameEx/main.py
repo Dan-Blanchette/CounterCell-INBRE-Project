@@ -4,7 +4,7 @@
 Author: Daniel Blanchette
 Date: 6/29/2022
 
-Copyright (c) <year>, <copyright holder>
+Copyright (c) 2002, Daniel Blanchette
 All rights reserved.
 
 This source code is licensed under the BSD-style license found in the
