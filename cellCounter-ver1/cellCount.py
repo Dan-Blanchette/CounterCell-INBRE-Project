@@ -46,17 +46,23 @@ def show_img(image):
 # microglia cells being identified.
 def cells_only(image_path, connectivity = 1, count = 1):
     img1 = show_img(image_path)
+    # Green channel bit mask applied
     green_filtered_cells = (img1[:,:,1] > 132) & (img1[:,:,0] <= 97) & (img1[:,:,2] <= 97)
-    
+    # make a copy of the original image
     cells_new = img1.copy()
+    # for all color channels (numpy arrays), apply the bit mask logic
     cells_new[:,:,0] = cells_new[:,:,0] * green_filtered_cells
     cells_new[:,:,1] = cells_new[:,:,1] * green_filtered_cells
     cells_new[:,:,2] = cells_new[:,:,2] * green_filtered_cells
-    
+    # convert the bit masked image to grayscale.
     gray_cells = skimage.color.rgb2gray(cells_new)
+    # apply gaussian blur to further eliminate background noise from the image.
     blurred_image = skimage.filters.gaussian(gray_cells, sigma = 3.0)
+    # store the new mask value with a gray scale threshold to improve cell count in variable 'mask'
     mask = blurred_image > 0.1
+    # apply color fill
     labeled_image, cell_count = skimage.measure.label(mask, connectivity=connectivity, return_num=True)
+    # console print out of identfied cell counts based on the applied mask
     print(f"There are {cell_count} cells in {image_path}")
     
     
