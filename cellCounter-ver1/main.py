@@ -18,10 +18,13 @@ import cellCount as count
 
 # main Function
 def main():
+    # this line can be replaced with os user input for pathing. For now the specified path is used for testing in Spyder IDE 
+    # as it does not handle user I/O well (crashes).
     path = '../pngimgs/'
+    # find all the files in the specified directory that start with a number value
     filelist = sorted(count.os.listdir(path), 
                    key=lambda x: int(count.os.path.splitext(x)[0]))
-    
+    # for all images in the directory, run the cells_only function for image analysis
     for image_file in filelist :
        count.cells_only(path + image_file)
 
