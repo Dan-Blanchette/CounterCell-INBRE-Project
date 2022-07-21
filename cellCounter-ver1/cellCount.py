@@ -4,6 +4,12 @@
 Created on Wed Jun 22 14:52:58 2022
 
 @author: danb22
+
+Copyright (c) <year>, <copyright holder>
+All rights reserved.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree. 
 """
 
 import matplotlib.pyplot as plt
