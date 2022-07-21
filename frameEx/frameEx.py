@@ -20,7 +20,7 @@ def fps(path):
 
     # Find OpenCV version
     (major_ver, minor_ver, subminor_ver) = (cv2.__version__).split('.')
-
+    # if openCV is version less than version 3,... (note: opencv2 is used)
     if int(major_ver)  < 3 :
         fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
         print("Frames per second in the video: {0}".format(fps))
@@ -31,18 +31,18 @@ def fps(path):
     video.release()
 
 def count_frames_manual(video):
-    #
+    # initialize variable for counting
     total=0
 
     while True:
-        #
-        (grabbed, frame) = video.read()
-
+        # Continue getting frames as long as there are frames to process. 
+        grabbed = video.read()
+        # if no frames remain, break out of the while loop.
         if not grabbed:
             break
-
+        # count is iterated by 1
         total += 1
-    #
+    # return the total number of frames processed
     return total
 
 
@@ -58,7 +58,7 @@ def count_frames(path, override=False):
     if override:
         total = count_frames_manual(video)
 
-    #
+    # otherwise, continue couting the frames via the video.get cv2 function.
     else:
         
         try:
@@ -66,7 +66,7 @@ def count_frames(path, override=False):
         
         except:
             total = count_frames_manual(video)
-    
+    # close the video
     video.release()
 
     return total
@@ -82,24 +82,27 @@ def count_frames(path, override=False):
  # user analysis on frames per second for the video and total frames processed
 """ 
 def frame_extractor(vidpath, dirpath):
-
+    # get the path to the video file
     fileInfo = pinfo.MediaInfo.parse(vidpath)
+    # for all video files in the directory.
     for track in fileInfo.tracks:
+        # if the file is a video in the directory, perform video capture
         if track.track_type == "Video":
             # variable that will contain the video capture from the specified file
             vidcap = cv2.VideoCapture(str(vidpath))  
-    
+    # if the directory already exists do not copy any files to that directory (overwrite protection)
     if (os.path.isdir(dirpath)) == 1:
         print("Directory already exists")
         exit(0)
     else:
+        # make a new directory at the specified path
         os.mkdir(dirpath)
 
     # send the images to the specified user directory
     path = dirpath
 
-    # This function sets the time between frame captures
-    # and names the extracted still image files
+    # This function sets the time between frame captures to one-half of a second
+    # and names the extracted still image files numerically starting at 1 to n. Where n = # of processed images.
     def getFrame(sec):
         
         vidcap.set(cv2.CAP_PROP_POS_MSEC, sec*1000)
