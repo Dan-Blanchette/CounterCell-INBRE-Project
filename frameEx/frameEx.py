@@ -26,7 +26,7 @@ def fps(path):
         print("Frames per second in the video: {0}".format(fps))
     else :
         fps = video.get(cv2.CAP_PROP_FPS)
-        print("Frames per second the video: {0}".format(fps))
+        print("Frames per second in the video: {0}".format(fps))
 
     video.release()
 
@@ -36,7 +36,7 @@ def count_frames_manual(video):
 
     while True:
         # Continue getting frames as long as there are frames to process. 
-        grabbed = video.read()
+        (grabbed, frame) = video.read()
         # if no frames remain, break out of the while loop.
         if not grabbed:
             break
