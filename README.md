@@ -1,5 +1,5 @@
 # CounterCell-INBRE-Project
-My cell counter program from the INBRE 2022 internship I took part in as an undergrad fellow.
+This README is intended to provide a project overview and background information about the development of this software.
 
 
 # Abstract:
