@@ -66,7 +66,7 @@ def getRGB_click(event, x, y, flags, param, counter = 0):
         print("Coordinates of pixel: X: ", x, "Y: ", y, "\n")
 
 # Read an image, create a window and bind the function to the window
-image = cv2.imread("../../pngimgs/1.png")
+image = cv2.imread("../pngimgs/1.png")
 cv2.namedWindow('mouseRGB', cv2.WINDOW_NORMAL)
 cv2.setMouseCallback('mouseRGB', getRGB_click)
 # before the while loop, if there are any .csv files
