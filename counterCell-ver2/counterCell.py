@@ -49,7 +49,7 @@ def show_img(image):
 # Isolates the microglia cells based on thresholded values of the RGB channels
 # and gererates a modified copy of the original image with only the 
 # microglia cells being identified.
-def cells_only(image_path, connectivity = 1, count = 1):
+def cells_only(image_path, connectivity = 2, count = 1):
     img1 = show_img(image_path)
     # Green channel bit mask applied
     green_filtered_cells = (img1[:,:,1] > 132) & (img1[:,:,0] <= 97) & (img1[:,:,2] <= 97)

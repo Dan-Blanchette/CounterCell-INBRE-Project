@@ -1,7 +1,6 @@
 import cv2
 import os
 import pymediainfo as pinfo
-from PIL import Image
 """
 Author: Daniel Blanchette
 Date: 6/29/2022
@@ -93,6 +92,8 @@ def frame_extractor(vidpath, dirpath):
     # if the directory already exists do not copy any files to that directory (overwrite protection)
     if (os.path.isdir(dirpath)) == 1:
         print("Directory already exists")
+        print("Image files were preserved and not overwritten.")
+        print("Please specify a different directory path.")
         exit(0)
     else:
         # make a new directory at the specified path
