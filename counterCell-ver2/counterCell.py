@@ -23,7 +23,7 @@ import os
 import skimage.filters
 import skimage.color
 import skimage.measure
-from PIL.Image import core as _imaging
+from PIL.Image import core as imaging
 
 
 # this fucntion produces three images across the pixel channel spectrum

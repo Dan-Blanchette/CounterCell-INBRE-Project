@@ -25,36 +25,86 @@ def rgbAv(data, l):
     return int(average)
 
 # read the csv data
-rcsv = open('rData.csv')
-bcsv = open('bData.csv')
-gcsv = open('gData.csv')
+rcsvh = open('rData_H.csv')
+bcsvh = open('bData_H.csv')
+gcsvh = open('gData_H.csv')
+
+rcsvl = open('rData-L.csv')
+bcsvl = open('bData-L.csv')
+gcsvl = open('gData-L.csv')
+
 
 # read the csv data gathered for each channel
-csvReadRed = csv.reader(rcsv)
-csvReadBlue = csv.reader(bcsv)
-csvReadGreen = csv.reader(gcsv)
+
+# high range values
+csvReadRedh = csv.reader(rcsvh)
+csvReadBlueh = csv.reader(bcsvh)
+csvReadGreenh = csv.reader(gcsvh)
+# low range values
+csvReadRedl = csv.reader(rcsvl)
+csvReadBluel = csv.reader(bcsvl)
+csvReadGreenl = csv.reader(gcsvl)
 
 # store the data as a list
-rdata = list(csvReadRed)
-bdata = list(csvReadBlue)
-gdata = list(csvReadGreen)
+
+# high
+rdatah = list(csvReadRedh)
+bdatah = list(csvReadBlueh)
+gdatah = list(csvReadGreenh)
+# low
+rdatal = list(csvReadRedl)
+bdatal = list(csvReadBluel)
+gdatal = list(csvReadGreenl)
+
 
 # remove the list of list format from the data
-rlist = remLoL(rdata)
-glist = remLoL(gdata)
-blist = remLoL(bdata)
+# high
+rlisth = remLoL(rdatah)
+glisth = remLoL(gdatah)
+blisth = remLoL(bdatah)
+# low
+rlistl = remLoL(rdatal)
+glistl = remLoL(gdatal)
+blistl = remLoL(bdatal)
 
 # convert numerical values from a string to integers
-rvals = lst_strToint(rlist)
+# high
+rvalsh = lst_strToint(rlisth)
+bvalsh = lst_strToint(blisth)
+gvalsh = lst_strToint(glisth)
+# low
+rvalsl = lst_strToint(rlistl)
+bvalsl = lst_strToint(blistl)
+gvalsl = lst_strToint(glistl)
+
 
 # get the size of the list for averaging
-rlen = len(rvals)
+# high
+rlenh = len(rvalsh)
+blenh = len(bvalsh)
+glenh = len(gvalsh)
+# low
+rlenl = len(rvalsl)
+blenl = len(bvalsl)
+glenl = len(gvalsl)
 
 # get the new threshold value by averaging the data
-rthresh = int(rgbAv(rvals, rlen))
-
-print("Red threshold:", rthresh)
-
+# high
+rthresh_h = int(rgbAv(rvalsh, rlenh))
+bthresh_h = int(rgbAv(bvalsh, blenh))
+gthresh_h = int(rgbAv(gvalsh, glenh))
+# low
+rthresh_l = int(rgbAv(rvalsl, rlenl))
+bthresh_l = int(rgbAv(bvalsl, blenl))
+gthresh_l = int(rgbAv(gvalsl, glenl))
+# high
+print("High Red threshold:", rthresh_h)
+print("High Blue threshold:", bthresh_h)
+print("High Green threshold:", gthresh_h)
+# low
+print("Low Red threshold:", rthresh_l)
+print("Low Blue threshold:", bthresh_l)
+print("Low Green threshold:", gthresh_l)
 
 # print("The size of this array is:", rsize)
 
@@ -65,9 +115,15 @@ print("Red threshold:", rthresh)
 # print(rsize, gsize, bsize)
 
 
-print(rvals)
-print(glist)
-print(blist)
+print(rvalsh)
+print(gvalsh)
+print(bvalsh)
 
-rmath = sum(rvals)
+print(rvalsl)
+print(gvalsl)
+print(bvalsl)
+
+
+
+rmath = sum(rvalsh)
 print(rmath)

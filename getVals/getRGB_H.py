@@ -10,7 +10,7 @@ click = cv2.EVENT_LBUTTONDOWN
 
 def getRed(event, x, y):
     # open file called bData.csv and have it append clicked entries to a file
-    rFile = open("rData.csv", "a", newline='')
+    rFile = open("rData_H.csv", "a", newline='')
     rOutput = csv.writer(rFile)
     # if the user left clicks, store all red values to a .csv file
     if event == click:
@@ -28,7 +28,7 @@ def getRed(event, x, y):
 
 def getBlue(event, x, y):
     # open file called bData.csv and have it append clicked entries to a file
-    bFile = open("bData.csv", "a", newline='')
+    bFile = open("bData_H.csv", "a", newline='')
     bOutput = csv.writer(bFile)
     # if the user left clicks, store all blue values to a .csv file
     if event == click:
@@ -41,7 +41,7 @@ def getBlue(event, x, y):
 
 def getGreen(event, x, y):
     # open file called bData.csv and have it append clicked entries to a file
-    gFile = open("gData.csv", "a", newline='')
+    gFile = open("gData_H.csv", "a", newline='')
     gOutput = csv.writer(gFile)
     # if the user left clicks, store all green values to a .csv file
     if event == click:
@@ -73,7 +73,7 @@ cv2.setMouseCallback('mouseRGB', getRGB_click)
 # clear the contents of each file for writing
 # else continue with program.
 for csvFile in os.listdir('.'):
-    if csvFile.endswith('.csv'):
+    if csvFile.endswith('_H.csv'):
         f = open(csvFile, 'r+')
         f.truncate(0)
     else:
