@@ -4,11 +4,11 @@ This README is intended to provide a project overview and background information
 
 # Abstract:
 Microglia research of the central nervous system (CNS) is a rapidly growing field in biology. 
-Dr. Diana Mitchell’s2 research investigates wild-type retinal microglia in zebrafish and a mutation that triggers the regeneration of retinal neurons. 
+Dr. Diana Mitchell’s research investigates wild-type retinal microglia in zebrafish and a mutation that triggers the regeneration of retinal neurons. 
 Further research on this mutation may lead to medical treatments that repair the damaged retinas of patients. 
 Cell data is recorded as a digital video file at 20x magnification using a spinning disk confocal microscope. 
 A 488nm laser illuminates green fluorescent proteins (GFPs) within the microglia while an optimized filter set detects GFP emissions. 
-This type of imaging allows researchers to observe cell behavior. Using Python, the Long3 computer science lab aids researchers by automating image analysis. 
+This type of imaging allows researchers to observe cell behavior. Using Python, the Long computer science lab aids researchers by automating image analysis. 
 The software stores the data as image files by extracting half-second frames from the zebrafish video file while reporting the frames-per-second (FPS). 
 Through user input, a second routine identifies the microglia cell’s red, green, and blue (RGB) pixel values and then isolates them. 
 After its runtime, the software records cell count and applies a color fill filter to each cell. 
