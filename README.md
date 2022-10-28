@@ -1,4 +1,4 @@
-# CounterCell-INBRE-Project
+# Project_CounterCell-INBRE
 This README is intended to provide a project overview and background information about the development of this software.
 
 
