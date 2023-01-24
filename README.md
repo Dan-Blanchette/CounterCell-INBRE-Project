@@ -28,4 +28,13 @@ Additional work includes computational metrics such as microglia cell tracking, 
 # Cell counter program technical specifications: 
 ### Hard disk space (programs and Spyder IDE): 659.1 MB  
 ### Memory: 8GB, DDR4 SDRAM (recommended) 
-### Compatible GPU used for project:  NVIDIA GeForce RTX 2060 6GB RAM
+### Compatible GPU used for project:  NVIDIA GeForce RTX 2060 6GB RAM (equivilent or greater specs)
+
+# Project Dependencies and Libraries documentation
+### 1.) Scikit-image [skiamge documenatation](https://scikit-image.org/docs/stable/).
+### 2.) Numpy [Numpy documenatation](https://numpy.org/doc/stable/)
+### 3.) Matplotlib [Matplotlib user's guide](https://matplotlib.org/stable/users/index)
+### 4.) Plotly [Plotly Python information](https://plotly.com/python/)
+### 5.) Anaconda [Anaconda Webpage](https://www.anaconda.com/products/distribution)
+### 6.) Jupyter Notebook [Jupyter Notebook Documentation](https://docs.jupyter.org/en/latest/)
+
