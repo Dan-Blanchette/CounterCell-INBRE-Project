@@ -30,7 +30,8 @@ Additional work includes computational metrics such as microglia cell tracking, 
 ### Memory: 8GB, DDR4 SDRAM (recommended) 
 ### Compatible GPU used for project:  NVIDIA GeForce RTX 2060 6GB RAM (equivilent or greater specs)
 
-# Project Dependencies and Libraries documentation
+# Project Dependencies and Libraries documentation:
+
 ### 1.) Scikit-image [Skimage Documenatation](https://scikit-image.org/docs/stable/).
 ### 2.) Numpy [Numpy documenatation](https://numpy.org/doc/stable/)
 ### 3.) Matplotlib [Matplotlib user's guide](https://matplotlib.org/stable/users/index)
