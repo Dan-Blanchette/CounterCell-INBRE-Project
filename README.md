@@ -32,10 +32,10 @@ Additional work includes computational metrics such as microglia cell tracking, 
 
 # Project Dependencies and Libraries documentation:
 
-### 1.) Scikit-image [Skimage Documenatation](https://scikit-image.org/docs/stable/).
-### 2.) Numpy [Numpy documenatation](https://numpy.org/doc/stable/)
-### 3.) Matplotlib [Matplotlib user's guide](https://matplotlib.org/stable/users/index)
-### 4.) Plotly [Plotly Python information](https://plotly.com/python/)
-### 5.) Anaconda [Anaconda Webpage](https://www.anaconda.com/products/distribution)
-### 6.) Jupyter Notebook [Jupyter Notebook Documentation](https://docs.jupyter.org/en/latest/)
+#### 1.) Scikit-image [Skimage Documenatation](https://scikit-image.org/docs/stable/).
+#### 2.) Numpy [Numpy documenatation](https://numpy.org/doc/stable/)
+#### 3.) Matplotlib [Matplotlib user's guide](https://matplotlib.org/stable/users/index)
+#### 4.) Plotly [Plotly Python information](https://plotly.com/python/)
+#### 5.) Anaconda [Anaconda Webpage](https://www.anaconda.com/products/distribution)
+#### 6.) Jupyter Notebook [Jupyter Notebook Documentation](https://docs.jupyter.org/en/latest/)
 
