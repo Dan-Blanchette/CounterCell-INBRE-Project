@@ -23,7 +23,7 @@ Additional work includes computational metrics such as microglia cell tracking, 
 
 # Materials:
 ![image](https://github.com/Dan-Blanchette/INBRE-Internship-2022/blob/main/rdMeImg/Spyder%60.png)
-### Spyder IDE (https://www.spyder.org/)
+### Spyder IDE [Spyder-IDE official site](https://www.spyder-ide.org/)
 
 # Cell counter program technical specifications: 
 ### Hard disk space (programs and Spyder IDE): 659.1 MB  
