@@ -1,6 +1,9 @@
 # Project_CounterCell-INBRE
 This README is intended to provide a project overview and background information about the development of this software.
 
+## This project was made possible by Idaho INBRE
+## The project described was supported by an Institutional Development Award (IDeA) from the National Institute of General Medical Sciences of the National Institutes of Health under Grant #P20GM103408.
+
 
 # Abstract:
 Microglia research of the central nervous system (CNS) is a rapidly growing field in biology. 
